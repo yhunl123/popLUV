@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 8082;
+const port = 8081;
 
 app.get('/api/getTest', (req, res) => {
     res.send('get test');

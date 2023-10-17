@@ -1,16 +1,19 @@
 <template>
   <span>{{popCount}}</span>
+
+  <LoginModal></LoginModal>
 </template>
 
 <script>
 import {ref} from "vue";
 import axios from "axios";
 import {getCookie, setCookie} from "@/util/cookies";
+import LoginModal from "@/components/LoginModal";
 
 export default {
   name: "Home",
   components: {
-
+    LoginModal,
   },
   setup() {
     const popCount = ref(getCookie('popCount'));
